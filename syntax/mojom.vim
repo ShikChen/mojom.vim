@@ -15,6 +15,7 @@ syntax keyword mojomType        uint32 uint64 float double array
 syntax match mojomImport        "^\(import\)\s"
 syntax keyword mojomKeyword     const module interface enum struct union associated
 syntax match mojomOperator      /=>/
+syntax match mojomOperator      /@/
 syntax match mojomOperator      /?/
 
 " Comments
