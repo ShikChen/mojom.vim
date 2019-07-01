@@ -25,8 +25,8 @@ syntax match   mojomLineComment    "//.*" contains=mojomTodo,mojomDocLink,@Spell
 
 " Literals
 syntax match mojomBoolean       /true\|false/
-" Negative lookahead for "." so floats are not partly highlighted as integers.
-syntax match mojomInteger       /-\=[0-9]\(\.\)\@!/
+syntax match mojomInteger       /\v<(0|[1-9][0-9]*)>/
+syntax match mojomInteger       /\v<0[xX][0-9a-fA-F]*>/
 syntax match mojomFloat         /[0-9]\+\.[0-9]*\|[0-9]*\.[0-9]\+/
 syntax region mojomString       start=+"+ skip=+\\\\\|\\"+ end=+"+ contains=@Spell
 
