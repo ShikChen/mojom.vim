@@ -1,18 +1,11 @@
-" Copyright 2015 The Chromium Authors. All rights reserved.
-" Use of this source code is governed by a BSD-style license that can be
-" found in the LICENSE file.
-
 " Vim syntax file
 " Language: Mojom
-" To get syntax highlighting for .mojom files, add the following to your .vimrc
-" file:
-"     set runtimepath+=/path/to/src/tools/vim/mojom
 
-if exists("b:current_syntax")
+if exists('b:current_syntax')
   finish
 endif
 
-syn case match
+syntax case match
 
 syntax region mojomFold start="{" end="}" transparent fold
 
@@ -55,7 +48,7 @@ highlight default link mojomBoolean         Boolean
 highlight default link mojomFloat           Float
 highlight default link mojomAttribute       Label
 
-let b:current_syntax = "mojom"
-let b:spell_options = "contained"
+let b:current_syntax = 'mojom'
+let b:spell_options = 'contained'
 
-syn sync minlines=500
+syntax sync minlines=500

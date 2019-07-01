@@ -1,7 +1,3 @@
-" Copyright 2015 The Chromium Authors. All rights reserved.
-" Use of this source code is governed by a BSD-style license that can be
-" found in the LICENSE file.
-
 " We take care to preserve the user's fileencodings and fileformats,
 " because those settings are global (not buffer local), yet we want
 " to override them for loading mojom files, which should be UTF-8.
@@ -23,6 +19,6 @@ function! s:mojomfiletype_post()
   let &g:fileencodings = s:current_fileencodings
 endfunction
 
-au BufNewFile *.mojom setlocal filetype=mojom fileencoding=utf-8 fileformat=unix
-au BufRead *.mojom call s:mojomfiletype_pre()
-au BufReadPost *.mojom call s:mojomfiletype_post()
+autocmd BufNewFile *.mojom setlocal filetype=mojom fileencoding=utf-8 fileformat=unix
+autocmd BufRead *.mojom call s:mojomfiletype_pre()
+autocmd BufReadPost *.mojom call s:mojomfiletype_post()
