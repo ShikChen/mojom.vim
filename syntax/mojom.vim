@@ -12,6 +12,7 @@ syntax region mojomFold start="{" end="}" transparent fold
 " Keywords
 syntax keyword mojomType        bool string int8 int16 int32 int64 uint8 uint16
 syntax keyword mojomType        uint32 uint64 float double array
+syntax keyword mojomType        handle message_pipe shared_buffer data_pipe_consumer data_pipe_producer
 syntax match mojomImport        "^\(import\)\s"
 syntax keyword mojomKeyword     const module interface enum struct union associated
 syntax match mojomOperator      /=>/
